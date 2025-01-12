@@ -5,6 +5,7 @@ import Lesson16 from "./lessons/Lesson16/Lesson16"
 import Layout from "./pages/UsersApp/Layout/Layout"
 import Home from "./pages/UsersApp/Home/Home"
 import Users from "./pages/UsersApp/Users/Users"
+import Homework16 from "./homeworks/Homework16/Homework16"
 //homeworks
 
 //consultation
@@ -20,6 +21,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/homework16" element={<Homework16/>}/>
           <Route path="*" element="Page not found" />
         </Routes>
       </Layout>
