@@ -26,3 +26,4 @@ export const counterSlice = createAppSlice({
 
 // 7. Экспорт экшена и селекторов для возможности их использования в компонентах 
 export const counterSliceActions = counterSlice.actions
+export const counterSliceSelectors = counterSlice.selectors
