@@ -5,12 +5,10 @@ import Lesson16 from "./lessons/Lesson16/Lesson16"
 import Layout from "./pages/UsersApp/Layout/Layout"
 import Home from "./pages/UsersApp/Home/Home"
 import Users from "./pages/UsersApp/Users/Users"
-<<<<<<< HEAD
-import Homeworks from "./homeworks/Homeworks"
-=======
-import Homework16 from "./homeworks/Homework16/Homework16"
->>>>>>> 5b2eb4c489418e572230781b792110d848739d3e
+
 //homeworks
+import Homeworks from "./homeworks/Homeworks"
+import Homework16 from "./homeworks/Homework16/Homework16"
 
 //consultation
 // import Consultation08 from "./consultation/Consultation08/Consultation08"
