@@ -12,9 +12,9 @@ function Homeworks() {
       <HomeworkTitle>Homeworks</HomeworkTitle>
       <HomeworksWrapper>
         <Homework>
-          <StyledLink to="*">Homework16</StyledLink>
+          <StyledLink to="homework16">Homework16</StyledLink>
         </Homework>
-        <Homework>
+        {/* <Homework>
           <StyledLink to="homework17">Homework17</StyledLink>
         </Homework>
         <Homework>
@@ -25,7 +25,7 @@ function Homeworks() {
         </Homework>
         <Homework>
           <StyledLink to="homework20">Homework20</StyledLink>
-        </Homework>
+        </Homework> */}
       </HomeworksWrapper>
     </HomeworksPage>
   )

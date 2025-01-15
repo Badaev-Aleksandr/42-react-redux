@@ -14,6 +14,7 @@ import {
   FooterNavContainer,
 } from "./styles"
 import Logo from "../../../assets/logo.jpg"
+import { isAction } from "@reduxjs/toolkit"
 
 function Layout({ children }: LayoutProps) {
   const navigate = useNavigate()
@@ -50,6 +51,14 @@ function Layout({ children }: LayoutProps) {
             to="/homeworks"
           >
             Homeworks
+          </StyledNavLink>
+          <StyledNavLink
+            style={({ isActive }) => ({
+              textDecoration: isActive ? "underline" : "none",
+            })}
+            to="/lessons"
+          >
+            Lessons
           </StyledNavLink>
         </NavContainer>
       </Header>

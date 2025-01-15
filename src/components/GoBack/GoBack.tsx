@@ -1,5 +1,4 @@
-import Button from "components/Button/Button";
-
+import Button from "../Button/Button";
 import { GoBackWrapper } from "./styles";
 
 import { useNavigate } from "react-router-dom";
