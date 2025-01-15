@@ -14,7 +14,6 @@ import {
   FooterNavContainer,
 } from "./styles"
 import Logo from "../../../assets/logo.jpg"
-import { isAction } from "@reduxjs/toolkit"
 
 function Layout({ children }: LayoutProps) {
   const navigate = useNavigate()
