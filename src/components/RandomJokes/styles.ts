@@ -29,7 +29,14 @@ export const JokesContainer = styled.div`
   gap: 20px;
 `
 export const JokeText = styled.div`
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  justify-content: space-between;
   font-size: 24px;
   font-weight: bold;
   color: rebeccapurple;
+`
+export const ButtonWrapper = styled.div`
+width: 90px;
 `
