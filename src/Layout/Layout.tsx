@@ -13,7 +13,7 @@ import {
   StyledLink,
   FooterNavContainer,
 } from "./styles"
-import Logo from "../../../assets/logo.jpg"
+import Logo from "../assets/logo.jpg"
 
 function Layout({ children }: LayoutProps) {
   const navigate = useNavigate()

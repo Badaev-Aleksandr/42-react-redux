@@ -19,8 +19,7 @@ import {
 import Button from "../Button/Button"
 
 function Feedback() {
-  const countLike = useAppSelector(feedbackLikesSliceSelectors.like)
-  const countDislike = useAppSelector(feedbackLikesSliceSelectors.dislike)
+  const {like, dislike} = useAppSelector(feedbackLikesSliceSelectors.feedbackData)
 
   const dispatch = useAppDispatch()
 
@@ -38,12 +37,12 @@ function Feedback() {
   return (
     <FeedbackContainer>
       <LikeWrapper>
-        <Like src={LikeIcon} onClick={addLike} />
-        <Result>{countLike}</Result>
+        <Like src={LikeIcon} alt="like" onClick={addLike} />
+        <Result>{like}</Result>
       </LikeWrapper>
       <DislikeWrapper>
-        <Dislike src={DislikeIcon} onClick={addDislike} />
-        <Result>{countDislike}</Result>
+        <Dislike src={DislikeIcon} alt="dislike" onClick={addDislike} />
+        <Result>{dislike}</Result>
       </DislikeWrapper>
       <Button name="Reset Results" onClick={resetResult} />
     </FeedbackContainer>

@@ -16,14 +16,11 @@ export const feedbackLikesSlice = createAppSlice({
     addDislike: create.reducer((state: LikesStateSlice) => {
       state.dislike = state.dislike + 1
     }),
-    resetLikes: create.reducer((state: LikesStateSlice) => {
-      state.like = 0
-      state.dislike = 0
-    }),
+    //способ очистки - вместо перезаписи свойств, нужно просто вернуть initialState
+    resetLikes: create.reducer(() => likesInitialState),
   }),
   selectors: {
-    like: (state: LikesStateSlice) => state.like,
-    dislike: (state: LikesStateSlice) => state.dislike,
+    feedbackData: (state: LikesStateSlice) => state,
   },
 })
 

@@ -1,16 +1,17 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-
-//lessons
-// import Lesson16 from "./lessons/Lesson16/Lesson16"
-import Layout from "./pages/UsersApp/Layout/Layout"
+import Layout from "./Layout/Layout"
 import Home from "./pages/UsersApp/Home/Home"
 import Users from "./pages/UsersApp/Users/Users"
+
+//lessons
+import Lessons from "./lessons/Lessons"
+import Lesson16 from "./lessons/Lesson16/Lesson16"
+import Lesson17 from "./lessons/Lesson17/Lesson17"
 
 //homeworks
 import Homeworks from "./homeworks/Homeworks"
 import Homework16 from "./homeworks/Homework16/Homework16"
-import Lessons from "./lessons/Lessons"
-import Lesson16 from "./lessons/Lesson16/Lesson16"
+
 
 //consultation
 // import Consultation08 from "./consultation/Consultation08/Consultation08"
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/lessons" element={<Lessons />} />
           <Route path="/lessons/lesson16" element={<Lesson16 />} />
           <Route path="/homeworks/homework16" element={<Homework16 />} />
+          <Route path="/lessons/lesson17" element={<Lesson17 />} />
           <Route path="*" element="Page not found" />
         </Routes>
       </Layout>
