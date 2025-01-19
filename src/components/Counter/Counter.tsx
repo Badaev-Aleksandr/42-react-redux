@@ -13,12 +13,14 @@ function Counter() {
   const count = useAppSelector(counterSliceSelectors.count)
   console.log(count)
 
+  const countMinusValue = 5;
+
   // 12. Сохраняем функции dispatch, которую возвращает хук useAppDispatch
   const dispatch = useAppDispatch()
 
   const onMinus = () => {
     // 13. Диспатчить экшен (индетификатор действия), который вызовет соответствующий редьюсер
-    dispatch(counterSliceActions.minus())
+    dispatch(counterSliceActions.minus(countMinusValue))
   }
 
   const onPlus = () => {

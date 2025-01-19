@@ -13,7 +13,7 @@ import {
   randomJokesSliceSelectors,
 } from "../../store/redux/randomJokes/randomJokesSlice"
 import { v4 } from "uuid"
-import type { JOKE, RandomJokesSliceState } from "../../store/redux/randomJokes/types"
+import type { JOKE } from "../../store/redux/randomJokes/types"
 
 function RandomJokes() {
   const dispatch = useAppDispatch()
