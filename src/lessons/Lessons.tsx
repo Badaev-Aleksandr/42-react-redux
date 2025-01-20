@@ -17,6 +17,9 @@ function Lessons() {
         <Lesson>
           <StyledLink to="lesson17">Lesson17</StyledLink>
         </Lesson>
+        <Lesson>
+          <StyledLink to="lesson18">Lesson18</StyledLink>
+        </Lesson>
       </LessonsWrapper>
     </LessonsPage>
   )

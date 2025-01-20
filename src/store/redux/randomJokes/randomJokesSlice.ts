@@ -1,8 +1,9 @@
 import axios from "axios"
 import { createAppSlice } from "../../createAppSlice"
 
-import type { JOKE, RandomJokesSliceState } from "./types"
+import type { RandomJoke, RandomJokesSliceState } from "./types"
 import type { PayloadAction } from "@reduxjs/toolkit"
+import { v4 } from "uuid"
 
 const randomJokesInitialState: RandomJokesSliceState = {
   data: [],
@@ -46,9 +47,13 @@ export const randomJokesSlice = createAppSlice({
         // 6. Обработка успешного результата
         fulfilled: (state: RandomJokesSliceState, action: any) => {
           state.status = "success"
-          const { id, setup, punchline } = action.payload
-          const joke: JOKE = { id, joke: `${setup} - ${punchline}` }
-          state.data = [...state.data, joke]
+          state.data = [
+            ...state.data,
+            {
+              id: v4(),
+              joke: `${action.payload.setup} - ${action.payload.punchline} `,
+            },
+          ]
         },
         // 7. Обработка ошибки
         rejected: (state: RandomJokesSliceState, action: any) => {
@@ -61,7 +66,7 @@ export const randomJokesSlice = createAppSlice({
     deleteJokeById: create.reducer(
       (state: RandomJokesSliceState, action: PayloadAction<string>) => {
         state.data = state.data.filter(
-          (joke: JOKE) => joke.id !== action.payload,
+          (joke: RandomJoke) => joke.id !== action.payload,
         )
       },
     ),

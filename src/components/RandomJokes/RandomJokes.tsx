@@ -4,16 +4,16 @@ import {
   JekeCard,
   JokesContainer,
   RandomJokesWrapper,
-  JokeText,
+  JokeWrapper,
   ButtonWrapper,
+  JokeText,
 } from "./styles"
 import { useAppDispatch, useAppSelector } from "../../store/hooks"
 import {
   randomJokesSliceAction,
   randomJokesSliceSelectors,
 } from "../../store/redux/randomJokes/randomJokesSlice"
-import { v4 } from "uuid"
-import type { JOKE } from "../../store/redux/randomJokes/types"
+import type { RandomJoke } from "../../store/redux/randomJokes/types"
 
 function RandomJokes() {
   const dispatch = useAppDispatch()
@@ -29,20 +29,20 @@ function RandomJokes() {
     dispatch(randomJokesSliceAction.deleteAllJokes())
   }
 
-  const jokeDelete = (id: string) => {
-    dispatch(randomJokesSliceAction.deleteJokeById(id))
-  }
-
   console.log(data)
 
-  const jokes = data.map((joke: JOKE) => {
+  const jokes = data.map((joke: RandomJoke) => {
+    const deleteJoke = () => {
+      dispatch(randomJokesSliceAction.deleteJokeById(joke.id))
+    }
+
     return (
-      <JokeText key={v4()}>
-        {joke.joke}
+      <JokeWrapper key={joke.id}>
+        <JokeText>{joke.joke}</JokeText>
         <ButtonWrapper>
-          <Button name="Delete" onClick={()=> jokeDelete(joke.id)} />
+          <Button name="Delete" onClick={deleteJoke} />
         </ButtonWrapper>
-      </JokeText>
+      </JokeWrapper>
     )
   })
 

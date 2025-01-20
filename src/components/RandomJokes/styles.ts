@@ -28,15 +28,20 @@ export const JokesContainer = styled.div`
   flex-direction: column;
   gap: 20px;
 `
-export const JokeText = styled.div`
+export const JokeWrapper = styled.div`
   display: flex;
+  align-items: center;
   gap: 15px;
   padding: 10px;
   justify-content: space-between;
+`
+
+export const JokeText = styled.div`
   font-size: 24px;
   font-weight: bold;
   color: rebeccapurple;
 `
+
 export const ButtonWrapper = styled.div`
 width: 90px;
 `
